@@ -145,7 +145,7 @@ const parseType = (schemaPrefix: string, type: string) => {
 	const withoutArrayDefinition = type.replace(arrayDefinitionRegex, '');
 	return pgNativeTypes.some((it) => type.startsWith(it))
 		? `${withoutArrayDefinition}${arrayDefinition}`
-		: `${schemaPrefix}"${withoutArrayDefinition}"${arrayDefinition}`;
+		: `${schemaPrefix}${withoutArrayDefinition}${arrayDefinition}`;
 };
 
 abstract class Convertor {
