@@ -8,7 +8,7 @@ const version = async () => {
 	const ormVersion = npmVersion ? `drizzle-orm: v${npmVersion}` : '';
 	const envVersion = process.env.DRIZZLE_KIT_VERSION;
 	const kitVersion = envVersion ? `v${envVersion}` : '--';
-	const versions = `drizzle-kit: ${kitVersion}\n${ormVersion}`;
+	const versions = `drizzle-kit fork: ${kitVersion}\n${ormVersion}`;
 	console.log(chalk.gray(versions), '\n');
 };
 
